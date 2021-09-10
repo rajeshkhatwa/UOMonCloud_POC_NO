@@ -1,0 +1,17 @@
+---
+spring:
+  config.activate.on-profile: default
+  datasource:
+    # url: "jdbc:sqlite:/home/user/projects/NetworkObjects/srv/sqlite.db"
+    url: "jdbc:sqlite:file::memory:?cache=shared"
+    driver-class-name: org.sqlite.JDBC
+    hikari:
+      maximum-pool-size: 1
+  sql:
+    init:
+      mode: always  # originally the value was always ..but since cds model created already changed to never
+
+     
+
+
+
