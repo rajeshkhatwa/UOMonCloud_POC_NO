@@ -6,6 +6,7 @@
   "repository": "<Add your repository here>",
   "devDependencies": {
     "@sap/hdi-deploy": "^4.2.0",
+    "@sap/ux-specification": "^1.90.8",
     "sqlite3": "^5.0.2"
   },
   "cds": {
@@ -15,5 +16,8 @@
         "model": "*"
       }
     }
-  }
+  },
+  "sapux": [
+    "app/project1"
+  ]
 }

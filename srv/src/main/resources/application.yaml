@@ -1,5 +1,6 @@
 ---
 spring:
+  web.resources.static-locations: "file:./app/webapp"
   config.activate.on-profile: default
   datasource:
     # url: "jdbc:sqlite:/home/user/projects/NetworkObjects/srv/sqlite.db"
@@ -12,6 +13,13 @@ spring:
       mode: always  # originally the value was always ..but since cds model created already changed to never
 
      
-
+cds:
+  security.mock.users:
+   - name: admin
+     password: admin
+     roles:
+     - admin  
+   - name: user
+     password: user
 
 
