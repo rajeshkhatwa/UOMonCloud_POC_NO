@@ -12,12 +12,15 @@
   "cds": {
     "requires": {
       "db": {
-        "kind": "sqlite",
-        "model": "*"
-      }
+      "[development]" : { "kind" : "sqlite"},
+      "[production]" : { "kind" : "hana"}
     }
   },
+   "hana": {
+        "deploy-format": "hdbtable"
+    },
   "sapux": [
     "app/project1"
   ]
+}
 }

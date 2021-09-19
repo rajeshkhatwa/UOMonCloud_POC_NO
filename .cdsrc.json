@@ -1,6 +1,14 @@
 {
     "build": {
-        "target": "."
+        "target": ".",
+        "tasks": [
+            {
+                "for": "java-cf"
+            },
+            {
+                "for": "hana"
+            }
+        ]
     },
     "requires": {
         "db": {

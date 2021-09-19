@@ -1,0 +1,39 @@
+## Generated mta.yaml based on template version 0.4.0
+## appName = NetworkObjects
+## language=java; multitenant=false
+## approuter=
+_schema-version: '3.1'
+ID: NetworkObjects
+version: 1.0.0-SNAPSHOT
+description: "NetworkObjects application"
+parameters:
+  enable-parallel-deployments: true
+   
+build-parameters:
+  before-all:
+   - builder: custom
+     commands:
+      - npm install --production
+      - npx -p @sap/cds-dk cds build --production
+
+modules:
+ # --------------------- SERVER MODULE ------------------------
+ - name: NetworkObjects-srv
+ # ------------------------------------------------------------
+   type: java
+   path: srv
+   properties:
+     SPRING_PROFILES_ACTIVE: cloud
+   build-parameters:
+     builder: custom
+     commands: [ mvn clean package ]
+     build-result: "target/*-exec.[wj]ar"
+   provides:
+    - name: srv-api      # required by consumers of CAP services (e.g. approuter)
+      properties:
+        srv-url: ${default-url}
+
+
+
+
+
