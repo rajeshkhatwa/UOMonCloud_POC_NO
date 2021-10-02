@@ -11,3 +11,15 @@ Content-Type: application/json
     "network_object_description" : "HANA DB on BTP",
     "network_object_type": "CLUSTER"
 }
+
+###
+POST http://localhost:8080/odata/v4/NetworkObjectsService/NetworkObjectTypes
+Content-Type: application/json
+
+{
+    "network_object_type_description" : "Clusters for PN",
+    "network_object_type": "CLUSTER"
+}
+
+###
+GET http://localhost:8080/odata/v4/NetworkObjectsService/NetworkObjectTypes

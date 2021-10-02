@@ -12,5 +12,6 @@ entity NetworkObjectTypes
 {
   key network_object_type : String(10) @title : 'Network Object Type';
    network_object_type_description : String(60) @title : 'Network Object Type Description'
+   
 }
 
