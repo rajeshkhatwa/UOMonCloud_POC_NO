@@ -8,8 +8,8 @@ POST http://localhost:8080/odata/v4/NetworkObjectsService/NetworkObjects
 Content-Type: application/json
 
 {
-    "network_object_description" : "HANA DB on BTP",
-    "network_object_type": "CLUSTER"
+    "network_object_description" : "Meter Object",
+    "network_object_type": "METER"
 }
 
 ###
